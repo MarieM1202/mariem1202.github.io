@@ -16,37 +16,37 @@ In today's digital landscape, data is abundant but often underutilized. Recogniz
 
 A significant highlight of this project was uncovering a segment of 13 customers who had not engaged in any transactions for over 90 days. This was achieved by creating a custom view in Snowflake, where I used a Common Table Expression (CTE) to first rank customers based on their last transaction date. 
 
-    CREATE OR REPLACE VIEW CUSTOMERS_VW AS (
-    WITH LISTIDs AS (
-        SELECT 
-            ID, Name, Email, LastTransaction,
-            -- Ranking emails by latest transaction date
-            rank() over (partition by email order by TO_DATE(LastTransaction, 'AUTO') desc) RANK 
-        FROM CUSTOMERS
-        -- Only the latest transaction for each email is considered
-        QUALIFY RANK = 1
-    )
+        CREATE OR REPLACE VIEW CUSTOMERS_VW AS (
+        WITH LISTIDs AS (
+            SELECT 
+                ID, Name, Email, LastTransaction,
+                -- Ranking emails by latest transaction date
+                rank() over (partition by email order by TO_DATE(LastTransaction, 'AUTO') desc) RANK 
+            FROM CUSTOMERS
+            -- Only the latest transaction for each email is considered
+            QUALIFY RANK = 1
+        )
 
 This was further filtered to only include those with the most recent transaction in each email group. The final query then incorporated additional transformation functions like SPLIT_PART and DATEDIFF to produce a more enriched dataset, which also included calculated columns such as 'AGE' and 'DaysSinceLastTrans.'
 
-     SELECT 
+        SELECT 
         ID,
         SPLIT_PART(TRIM(NAME, ' 0'), ',', 1) AS FIRST_NAME,
         SPLIT_PART(TRIM(NAME, ' 0'), ', ', 2) AS LAST_NAME,
         EMAIL,
-        
+
         TO_DATE(DoB, 'MMMM DD, YYYY') AS DoB,
         DATEDIFF(year, TO_DATE(DoB, 'MMMM DD, YYYY'), current_date()) AS AGE,
-        
+
         TO_DATE(LastTransaction, 'AUTO') AS LastTransaction,
         DATEDIFF(days, LastTransaction, current_date()) AS DaysSinceLastTrans,
-        
+
         IFF(((COMPANY IS NULL) OR (COMPANY = '')), 'N/A', COMPANY) AS COMPANY,
         LTRIM(PHONE, '+0') AS PHONE,
         ADDRESS, postalZip, Region, COUNTRY
-    FROM
+        FROM
         CUSTOMERS
-    WHERE
+        WHERE
         NOT(email IS NULL OR email = '') AND ID IN (SELECT ID FROM LISTIDs));
 
 
