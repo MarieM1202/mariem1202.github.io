@@ -1,26 +1,24 @@
 ---
-title: "Sound Healing: How Music Genres Affect Various Mental Health Conditions"
+title: "Music and Mental Health: A Statistical Journey"
 meta_title: ""
-description: "The primary objective of this project is to understand the effectiveness of different music genres on various self-reported mental health conditions. The goal is to identify whether specific genres have a statistically significant impact on levels of stress, anxiety, depression, or other mental health states."
+description: "The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, "Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
 image: /images/sound_healing.jpg
 categories: ["Python", "Machine Learning"]
 date: 2023-09-08
 tags: ["Python", "Tableau"]
 draft: false
 ---
+Music is often called the universal language, capable of evoking emotions that words sometimes fail to capture. Yet, can it be more than just a source of entertainment? Can it impact our mental state in a significant way? The primary objective of this project was to explore this fascinating intersection of music and mental health.
 
-Music is often called the universal language, capable of evoking emotions that words sometimes fail to capture. Yet, can it be more than just a source of entertainment? Can it impact our mental state in a significant way? The primary objective of this project is to explore this fascinating intersection of music and mental health.
+#### Project Objective
 
-### Project Objective
+The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, "Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
 
-The goal here is far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question we aim to answer is, "Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
+#### Exploratory Data Analysis (EDA): A Prelude to Our Findings
 
-### Exploratory Data Analysis (EDA): A Prelude to Our Findings
+Before diving into the Tableau dashboard, it's essential to note some intriguing trends unearthed during the exploratory data analysis. Rock, Pop, and Metal emerged as intriguing outliers — they were not only popular choices but also genres that showed a higher correlation with depression, anxiety, insomnia, and OCD.
 
-Before diving into the Tableau dashboard, it's essential to note some intriguing trends unearthed during our exploratory data analysis. Rock, Pop, and Metal emerge as intriguing outliers — they are not only popular choices but also genres that show a higher correlation with depression, anxiety, insomnia, and OCD. 
-
-While this is only a snapshot of the comprehensive insights you're about to witness, it highlights the complexity and duality of the impact that music genres can have on mental health. As you navigate through the dashboard, we invite you to ponder on these patterns and consider both the therapeutic potential and the nuanced effects that different music genres can have on our mental well-being.
-
+While this was only a snapshot of the comprehensive insights, it highlighted the complexity and duality of the impact that music genres can have on mental health.
 
 <div class='tableauPlaceholder' id='viz1694447228340' style='position: relative; width: 100%;'>
     <noscript>
@@ -52,5 +50,17 @@ While this is only a snapshot of the comprehensive insights you're about to witn
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
 
+#### Project Conclusion
+
+The original hypothesis aimed to test whether music genres have a statistically significant impact on self-reported stress levels. However, as the study progressed, the hypothesis was refined to explore the correlation between the BPM of music genres and self-reported levels of various mental health conditions, such as anxiety.
+
+Through statistical analyses like Pearson correlation and OLS regressions across different age groups, we found nuanced relationships:
+
+- For the age group 18-25, a positive relationship existed between BPM, hours of listening, and anxiety levels.
+- In the 26-35 age group, a negative relationship was observed with BPM but a positive relationship with hours of listening.
+
+These findings indicate that the relationship between BPM and mental health conditions is complex and influenced by various factors like age. Although the original hypothesis was not fully validated, the study offers valuable insights for more nuanced future research.
+
+---
 
 Check out my project on [GitHub](https://github.com/MarieM1202/sound_healing).
