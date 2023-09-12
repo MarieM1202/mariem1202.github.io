@@ -1,7 +1,7 @@
 ---
 title: "Music and Mental Health: A Statistical Journey"
 meta_title: ""
-description: "The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, "Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
+description: "The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
 image: /images/sound_healing.jpg
 categories: ["Python", "Machine Learning"]
 date: 2023-09-08
