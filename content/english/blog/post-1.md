@@ -12,7 +12,7 @@ Music is often called the universal language, capable of evoking emotions that w
 
 #### Project Objective
 
-The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, "Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
+The initial goal was far-reaching but precise: to understand the effectiveness of different music genres on various self-reported mental health conditions. The central research question aimed to answer was, Do certain genres have a statistically significant positive or negative effect on self-reported stress, anxiety, or depression levels?"
 
 #### Exploratory Data Analysis (EDA): A Prelude to Our Findings
 
